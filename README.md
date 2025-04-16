@@ -6,7 +6,8 @@
 <br />
 <div align="center">
   <a href="https://github.com/ryanthomas2/predictive-modeling-project">
-    <img src="https://placehold.co/100x100?text=ML+SGD&font=source-sans" alt="Project Logo" width="100" height="100">
+    <img src="[https://placehold.co/100x100?text=ML+SGD&font=source-sans](https://i.imgur.com/Bt60hO7.png
+)" alt="Project Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Predictive Modeling with Stochastic Gradient Descent</h3>
@@ -56,23 +57,4 @@ This project implements a machine learning model using **Stochastic Gradient Des
 ```bash
 pip install numpy pandas matplotlib
 
-### Roadmap
-- [x] CSV-based input support
-- [x] Custom SGD implementation
-- [x] Real-time graph output
-- [ ] Add multivariable regression support
-- [ ] Export trained model weights
-- [ ] Integrate model evaluation metrics (MSE, R²)
-- [ ] Add CLI options for learning rate and epochs
-
-### Contact
-**Ryan Thomas**  
-📧 ryanthomas2271@gmail.com  
-📞 717-704-7895  
-GitHub: [@ryanthomas2](https://github.com/ryanthomas2)
-
-**Arun Rajendra**  
-📧 arunraj@example.com  
-📞 254-346-0162
-GitHub: [@arunrajendra](https://github.com/arunrajendra)
 
