@@ -1,0 +1,57 @@
+import pandas as pd
+from sympy import *
+
+# Symbolic Variables
+a_sym, b_sym, x_sym, y_sym = symbols('a b x y', real=True)
+
+# Loading CSV File
+print()
+print("Gradient Descent for Linear Models")
+file = input("Enter CSV File Name: ")
+sample = pd.read_csv(file)
+X = sample.iloc[:, 0].values
+Y = sample.iloc[:, 1].values
+
+# Residual Squared Loss Function
+rslf = (a_sym * x_sym + b_sym - y_sym) ** 2
+
+# Gradient Computation
+partial_a = diff(rslf, a_sym)
+partial_b = diff(rslf, b_sym)
+
+# Numeric Conversion
+partial_a = lambdify((a_sym, b_sym, x_sym, y_sym), partial_a, 'numpy')
+partial_b = lambdify((a_sym, b_sym, x_sym, y_sym), partial_b, 'numpy')
+
+# Gradient Descent
+a = 0.0
+b = 0.0
+learning_rate = 1e-6
+tolerance = 1e-6
+max_iterations = 10000
+
+for i in range(max_iterations):
+    srslfa = 0
+    srslfb = 0
+    for x_val, y_val in zip(X, Y):
+        srslfa += partial_a(a, b, x_val, y_val)
+        srslfb += partial_b(a, b, x_val, y_val)
+    srslfa /= len(X)
+    srslfb /= len(X)
+    
+    a -= learning_rate * srslfa
+    b -= learning_rate * srslfb
+    
+    # Convergence Check
+    if abs(srslfa) < tolerance and abs(srslfb) < tolerance:
+        print(f"Converged after {i+1} iterations.")
+        break
+
+# Results
+print()
+print("Final Values:")
+print(f"a = {a}, b = {b}")
+print()
+print("Linear Model:")
+print(f"ŷ = {a}x + {b}")
+print()
