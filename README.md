@@ -26,7 +26,7 @@
 
 ## 📌 About The Project
 
-This project implements a machine learning model using **Stochastic Gradient Descent (SGD)** to train a simple linear regression predictor. It’s designed to demonstrate hands-on ML fundamentals and efficient optimization.
+This project implements a machine learning engine using **Stochastic Gradient Descent (SGD)** to train a simple linear regression predictor. It’s designed to demonstrate hands-on ML fundamentals and efficient optimization.
 
 ### 🧠 Features
 
