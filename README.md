@@ -6,9 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ryanthomas2/predictive-modeling-project">
-    <img src="[https://placehold.co/100x100?text=ML+SGD&font=source-sans](https://i.imgur.com/Bt60hO7.png
-)" alt="Project Logo" width="100" height="100">
-  </a>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg" alt="Linear Regression Logo" width="120" height="120">
 
   <h3 align="center">Predictive Modeling with Stochastic Gradient Descent</h3>
 
